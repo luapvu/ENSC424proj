@@ -1,0 +1,10 @@
+﻿Build started 11/18/2015 1:30:40 AM.
+     1>Project "C:\Users\vupau_000\Desktop\Assignment 5 ENSC 424\yuvpsnr.vcxproj" on node 2 (ClCompile target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo".\Debug/" /Fd".\Debug/vc140.pdb" /Gd /TP /analyze- /errorReport:prompt yuvpsnr.cpp
+         yuvpsnr.cpp
+     1>Done Building Project "C:\Users\vupau_000\Desktop\Assignment 5 ENSC 424\yuvpsnr.vcxproj" (ClCompile target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.66

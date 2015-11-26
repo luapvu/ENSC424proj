@@ -1,0 +1,19 @@
+﻿Build started 11/18/2015 6:21:29 PM.
+     1>Project "C:\Users\vupau_000\Desktop\Assignment 5 ENSC 424\viddec.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (.\Debug\) contains files shared from another project (videnc.vcxproj, yuvpsnr.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/viddec.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:".\Debug/viddec.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\viddec.lib" /MACHINE:X86 /SAFESEH .\Debug/arith.obj
+         .\Debug/bits.obj
+         .\Debug/quant.obj
+         .\Debug/vidcodeclib.obj
+         .\Debug/viddec.obj
+         .\Debug/xform.obj
+     1>arith.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+         viddec.vcxproj -> C:\Users\vupau_000\Desktop\Assignment 5 ENSC 424\.\Debug\viddec.exe
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\bscmake.exe /nologo /o".\Debug\viddec.bsc" .\Debug\arith.sbr .\Debug\bits.sbr .\Debug\quant.sbr .\Debug\vidcodeclib.sbr .\Debug\viddec.sbr .\Debug\xform.sbr
+     1>Done Building Project "C:\Users\vupau_000\Desktop\Assignment 5 ENSC 424\viddec.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.73

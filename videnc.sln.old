@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "videnc", "videnc.vcproj", "{94310888-0715-4BA3-B699-DC6F114D5E9D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{94310888-0715-4BA3-B699-DC6F114D5E9D}.Debug.ActiveCfg = Debug|Win32
+		{94310888-0715-4BA3-B699-DC6F114D5E9D}.Debug.Build.0 = Debug|Win32
+		{94310888-0715-4BA3-B699-DC6F114D5E9D}.Release.ActiveCfg = Release|Win32
+		{94310888-0715-4BA3-B699-DC6F114D5E9D}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
