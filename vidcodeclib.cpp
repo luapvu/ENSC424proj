@@ -36,6 +36,14 @@ ICodec::ICodec(unsigned w, unsigned h)
 
   SetFrameBufPointer(m_pfFrameBuf[0], m_pfFrameBuf[1]);
 
+  //variance buffer
+  m_variance = new double *[m_iMBNumH];
+  m_variance[0] = new double[m_iMBNumW * m_iMBNumH];
+
+  for (i = 1; i < m_iMBNumH; i++) {
+	  m_variance[i] = m_variance[i - 1] + m_iMBNumW;
+  }
+
   //MV buffer
   m_iMVy = new int *[m_iMBNumH];
   m_iMVy[0] = new int[m_iMBNumW * m_iMBNumH];
@@ -48,6 +56,7 @@ ICodec::ICodec(unsigned w, unsigned h)
   for(i = 1; i < m_iMBNumH; i++) {
     m_iMVx[i] = m_iMVx[i-1] + m_iMBNumW;
   }
+
 
   //context prob models
   for (i = 0; i < MAX_CONTEXT_NUM; i++) {
@@ -497,6 +506,7 @@ void IEncoder::MotionEst()
     for(y = 0; y < _h; y += MBSIZE) {
         for(x = 0; x < _w; x += MBSIZE) {
             MBMotionEst(_ydata, _ydataRef, y, x);
+			MSE(_ydata, _ydataRef, y, x); // determining variance 
         }
     }
 
@@ -645,6 +655,38 @@ void IEncoder::MBMotionEst(
     m_iMVx[y / MBSIZE][x / MBSIZE] = iMVx;
 
 }
+
+
+void IEncoder::MSE(
+	float **pfCurrFrame,    //pointer to the current frame,
+	float **pfRefFrame,   //pointer to the reference frame,
+	int y,
+	int x
+	) {
+	//coumputes MSE
+	double mse = 0;
+
+
+	for (int i = 0; i < MBSIZE; i++) {
+
+		for (int j = 0; j < MBSIZE; j++) {
+
+
+
+
+			mse += (pfCurrFrame[y + i][x + j] - pfRefFrame[y + i][x + j]) * (pfCurrFrame[y + i][x + j] - pfRefFrame[y + i][x + j]);
+
+		}
+
+	}
+	mse /= MBSIZE*MBSIZE;
+	m_variance[y / MBSIZE][x / MBSIZE] = mse;
+
+
+	//cout << ++counter << " this is variance " << m_variance[y / MBSIZE][x / MBSIZE] << endl;
+}
+
+
 
 
 //return the sum of absolute difference of two blocks with the given motion vectors

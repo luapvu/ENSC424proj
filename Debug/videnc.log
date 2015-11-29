@@ -1,27 +1,18 @@
-﻿Build started 11/22/2015 5:06:14 PM.
-     1>Project "C:\Users\vupau_000\Desktop\Assignment 5 ENSC 424\videnc.vcxproj" on node 2 (Build target(s)).
+﻿Build started 11/28/2015 5:35:31 PM.
+     1>Project "C:\Users\vupau_000\Documents\GitHub\ENSC424proj\videnc.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (.\Debug\) contains files shared from another project (viddec.vcxproj, yuvpsnr.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo".\Debug\\" /Fd".\Debug\vc140.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt arith.cpp bits.cpp quant.cpp videnc.cpp xform.cpp
-         xform.cpp
-         videnc.cpp
-         quant.cpp
-         bits.cpp
-         arith.cpp
-         Generating Code...
-       Link:
+     1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\videnc.exe" /INCREMENTAL /NOLOGO odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:".\Debug\videnc.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\videnc.lib" /MACHINE:X86 /SAFESEH .\Debug\arith.obj
          .\Debug\bits.obj
          .\Debug\quant.obj
          .\Debug\vidcodeclib.obj
          .\Debug\videnc.obj
          .\Debug\xform.obj
-     1>arith.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-         videnc.vcxproj -> C:\Users\vupau_000\Desktop\Assignment 5 ENSC 424\.\Debug\videnc.exe
+         videnc.vcxproj -> C:\Users\vupau_000\Documents\GitHub\ENSC424proj\.\Debug\videnc.exe
        BscMake:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\bscmake.exe /nologo /o".\Debug\videnc.bsc" .\Debug\arith.sbr .\Debug\bits.sbr .\Debug\quant.sbr .\Debug\vidcodeclib.sbr .\Debug\videnc.sbr .\Debug\xform.sbr
-     1>Done Building Project "C:\Users\vupau_000\Desktop\Assignment 5 ENSC 424\videnc.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\vupau_000\Documents\GitHub\ENSC424proj\videnc.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.68
+Time Elapsed 00:00:00.29

@@ -41,6 +41,7 @@ class ICodec
   float **_ydataRef, **_udataRef, **_vdataRef;
 
   int **m_iMVy, **m_iMVx;
+  double **m_variance;
 
   float *m_fBlkBuf[BLOCKSIZE];
 
@@ -75,6 +76,12 @@ class IEncoder:public ICodec
     int iMAD0);
 
   void EncodeMV();
+
+  void MSE(float **pfCurrFrame,    //pointer to the current frame,
+	  float **pfRefFrame,   //pointer to the reference frame,
+	  int y,
+	  int x
+	  );
 
   void DumpMV(ofstream& DumpFile);
 
